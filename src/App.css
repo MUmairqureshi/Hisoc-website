@@ -157,6 +157,172 @@
 
 
 
+
+
+
+
+/*help-available  */
+
+.help-available {
+  background-color: #f9f9f9; /* Light background color */
+  /* background-image: url('../src/Assets/images/heroimg.png');  */
+  background-size: cover;
+  background-position: center;
+}
+
+.stat-card {
+  background-color: #ffffff; /* Default color to override */
+}
+
+.bg-light-green {
+  background-color: #e8f5e9; /* Light green background */
+}
+
+.bg-light-purple {
+  background-color: #f3e5f5; /* Light purple background */
+}
+
+.bg-light-yellow {
+  background-color: #fff9e6; /* Light yellow background */
+}
+
+.stat-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #6c757d; /* Grey color for supporting text */
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+      padding: 20px;
+  }
+
+  .help-available h2 {
+      font-size: 1.75rem;
+  }
+
+  .help-available p {
+      font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+/*transitional-housing-section  */
+
+
+
+
+
+
+
+
+
+.scrollable-container-y {
+  max-height: 500px; /* Adjust the height as needed */
+  overflow-y: scroll;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.scrollable-container-y::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.info-card {
+  background-color: #ffffff; /* Default card background */
+  border-radius: 10px;
+}
+
+.btn-outline-primary {
+  border-radius: 25px; /* Rounded button */
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* news-section */
+.news-section {
+  background-color: #f9f9f9; /* Light background */
+}
+
+.info-card {
+  background-color: #00796b; /* Teal background */
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.news-card {
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.news-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.slick-prev, .slick-next {
+  color: #00796b; /* Custom color for the slider arrows */
+}
+
+.slick-dots li button:before {
+  color: #00796b; /* Custom color for the dots */
+}
+
+@media (max-width: 768px) {
+  .news-card {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
+
+
+
 /* Footer */
 
 .footer {
@@ -186,10 +352,64 @@
 
 
 
+/* Event */
+.news-section {
+  background-color: #f9f9f9; /* Light background */
+}
 
+.info-card {
+  background-color: #00796b; /* Teal background */
+  color: #ffffff;
+  border-radius: 10px;
+}
 
+.news-card {
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
 
+.news-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
 
+.slick-arrow {
+  position: absolute;
+  top: -35px; /* Adjust the position of the arrows */
+  background-color: #ffc107; /* Custom yellow color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 0; /* Position the left arrow */
+}
+
+.slick-next {
+  right: 0; /* Position the right arrow */
+}
+
+.slick
+-arrow:hover {
+  background-color: #e0a800; /* Darker shade on hover */
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+  color: #fff; /* White color for the arrow */
+}
+
+.slick-dots li button:before {
+  color: #00796b; /* Custom color for the dots */
+}
+
+@media (max-width: 768px) {
+  .news-card {
+      width: 100%; /* Full width on smaller screens */
+  }
+}
 
 
 
