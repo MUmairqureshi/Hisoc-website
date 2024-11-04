@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+.header-section {
+  background-color: #333; /* Dark background similar to the image */
+  color: #fff;
+  font-size: 14px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-item {
+  margin-bottom: 5px; /* Add margin to handle wrapping on small screens */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+.navbar-brand img {
+  height: 40px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  color: #333; /* Adjust color as needed */
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #333;
+}
+
+.btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.navbar {
+  font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* Herostart */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.inerhero {
+  background-image: url('../src/Assets/images/heroimg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust based on your needs */
+}
+
+.slide-content {
+  padding: 20px;
+  /* max-width: 600px; */
+}
+
+@media (max-width: 768px) {
+  .slide-content {
+      padding: 10px;
+      text-align: center;
+      max-width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* yourwish */
+
+
+
+
+.how-we-do-it {
+  background-color: #f8f9fa; /* Light background for contrast */
 }
 
-.App-link {
-  color: #61dafb;
+.overlay-content {
+  background-image: url('../src/Assets/images/heroimg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff; /* Ensure text is readable */
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: inline-block;
+}
+
+.contact-img {
+  height: 60px; /* Adjust size as needed */
+  border-radius: 50%; /* Rounded badge */
+}
+
+@media (max-width: 768px) {
+  .how-we-do-it .overlay-content {
+      text-align: center;
+      padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .contact-badge {
+      position: static;
+      margin-top: 20px;
   }
+}
+
+
+
+
+
+
+
+
+
+/* what-sets-us-apart */
+
+
+
+.what-sets-us-apart {
+  background-image: url('../src/Assets/images/heroimg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fallback color */
+  backdrop-filter: brightness(0.7); /* Darken the background for text readability */
+  padding: 60px 15px;
+}
+
+.what-sets-us-apart h2 span {
+  font-style: italic; /* Italic styling for emphasis */
+}
+
+@media (max-width: 768px) {
+  .what-sets-us-apart {
+      padding: 30px 10px;
+  }
+
+  .what-sets-us-apart h2 {
+      font-size: 1.75rem;
+  }
+
+  .what-sets-us-apart p {
+      font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer {
+  font-size: 0.9rem;
+}
+
+.footer h5 {
+  font-weight: bold;
+}
+
+.footer a {
+  color: #6c757d; /* Grey color for links */
+}
+
+.footer a:hover {
+  color: #0056b3; /* Change color on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer-bottom {
+  font-size: 0.8rem;
+  border-top: 1px solid #4e4e4e;
+}
+
+.footer-logo {
+  height: 40px; /* Adjust height as needed */
+}
+
+.footer-icon {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footer-icon:hover {
+  color: #ccc; /* Change color on hover */
+}
+
+.donate-badge {
+  height: 50px; /* Adjust size as needed */
+}
+
+.donate-button img {
+  border-radius: 50%; /* Round badge */
 }
