@@ -1,3 +1,11 @@
+
+
+@media (min-width: 1600px) {
+  .container {
+      max-width: 1440px;
+  }
+}
+
 .header-section {
   background-color: #333; /* Dark background similar to the image */
   color: #fff;
@@ -288,39 +296,280 @@
 
 
 /* news-section */
+
+ 
+/*  
 .news-section {
-  background-color: #f9f9f9; /* Light background */
+  background-color: #f9f9f9; 
+}
+  */
+ 
+
+ .news-section{
+  overflow: hidden;
+ }
+
+
+ .announcements-section {
+  background-color: #e8f4f8;
+  padding: 2rem;
 }
 
-.info-card {
-  background-color: #00796b; /* Teal background */
-  color: #ffffff;
-  border-radius: 10px;
+.announcement-header {
+  background-image: url('./Assets/images/news-announcementbg.png'); /* Replace with the actual path */
+  background-size: cover;
+  background-position: center;
+  /* position: relative; */
+  height: 90vh;
+  color: #fff;
+  padding: 2rem;
 }
 
-.news-card {
-  border-radius: 10px;
-  transition: transform 0.2s;
+.announcement-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust overlay color and opacity */
+  z-index: 1;
 }
 
-.news-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
+.announcement-header h2,
+.announcement-header p,
+.announcement-header .view-announcements-btn {
+  position: relative;
+  z-index: 2;
 }
 
-.slick-prev, .slick-next {
-  color: #00796b; /* Custom color for the slider arrows */
+.announcement-header h2 {
+  font-weight: bold;
+  color: #fff;
 }
 
-.slick-dots li button:before {
-  color: #00796b; /* Custom color for the dots */
+.announcement-header .highlighted {
+  color: #16a085;
+  font-style: italic;
 }
 
-@media (max-width: 768px) {
-  .news-card {
-      width: 100%; /* Full width on smaller screens */
+ 
+.view-announcements-btn {
+  font-size: 0.9rem;
+  color: #16a085;
+  border-color: #16a085;
+}
+
+.view-announcements-btn:hover {
+  background-color: #16a085;
+  color: #fff;
+}
+
+.announcement-card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-card .date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.announcement-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.announcement-card .btn-outline-primary {
+  font-size: 0.85rem;
+  color: #16a085;
+  border-color: #16a085;
+}
+
+.announcement-card .btn-outline-primary:hover {
+  background-color: #16a085;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .announcement-header {
+    text-align: left;
+  }
+
+  .view-announcements-btn {
+    width: 100%;
+    margin-top: 1rem;
   }
 }
 
+
+ 
+
+/* Positioning and styling of the slick slider arrows */
+.slick-prev {
+  position: absolute;
+  top: 10px; /* Adjust as needed to place near the top right */
+  width: 40px;
+  height: 40px;
+  background-color: #6E6E6F; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #fff; /* White arrow icon */
+  margin-bottom: 4px;
+}
+
+
+  .slick-next {
+  position: absolute;
+  justify-content: center;
+  
+  top: 10px; 
+  width: 40px;
+  height: 40px;
+  background-color: #FDD22E; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #6E6E6F; /* White arrow icon */
+  margin-bottom: 4px;
+}
+/* Position the left arrow to the left and the right arrow to the right */
+.slick-prev {
+  left: auto; /* Remove default positioning */
+  right: 60px; /* Adjust as needed */
+}
+
+.slick-next {
+  right: 10px; /* Adjust as needed to be close to the right side */
+}
+
+/* Hover effect for the arrows */
+  .slick-next:hover {
+  position: absolute;
+  justify-content: center;
+  
+  top: 10px; 
+  width: 40px;
+  height: 40px;
+  background-color: #FDD22E; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #6E6E6F; /* White arrow icon */
+  margin-bottom: 4px;
+}
+
+.slick-prev:hover{
+
+  position: absolute;
+  top: 10px; /* Adjust as needed to place near the top right */
+  width: 40px;
+  height: 40px;
+  background-color: #6E6E6F; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #fff; /* White arrow icon */
+  margin-bottom: 4px;
+}
+
+
+
+
+.slick-prev:hover, .slick-prev:focus{
+  position: absolute;
+  top: 10px; /* Adjust as needed to place near the top right */
+  width: 40px;
+  height: 40px;
+  background-color: #6E6E6F; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #fff; /* White arrow icon */
+  margin-bottom: 4px;
+}
+
+
+
+
+.slick-prev{
+  right: 80px;
+}
+
+.slick-next:hover, .slick-next:focus{
+  position: absolute;
+  justify-content: center;
+  
+  top: 10px; 
+  width: 40px;
+  height: 40px;
+  background-color: #FDD22E; /* Yellow background */
+  border-radius: 50%; /* Makes the button circular */
+  border: none; /* Remove default border */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensures buttons are on top of carousel content */
+  color: #6E6E6F; /* White arrow icon */
+  margin-bottom: 4px;
+}
+/* Arrow Icon */
+.slick-prev:before, .slick-next:before {
+  font-size: 1.5rem;  
+  /* color: #fff;  */
+  content: ''; 
+}
+
+/* Custom icon with background image */
+.slick-prev .arrow-icon, .slick-next .arrow-icon {
+  font-size: 1.7rem;
+  /* color: #fff; */
+}
+
+/* Add a custom arrow icon if needed (e.g., Font Awesome or similar) */
+.slick-prev .arrow-icon::before {
+  content: '←'; /* Use a left arrow icon */
+}
+
+.slick-next .arrow-icon::before {
+  content: '→'; /* Use a right arrow icon */
+}
+
+
+ 
+
+  
+  
 
 
 /* Footer */
@@ -343,73 +592,141 @@
 
 
 
-
-
-
-
-
-
-
-
-
-/* Event */
-.news-section {
-  background-color: #f9f9f9; /* Light background */
+/* Main Container and Layout */
+.news-section .row {
+  min-height: 100vh;
 }
 
-.info-card {
-  background-color: #00796b; /* Teal background */
+.announcement-header {
+  background-image: url('./Assets/images/news-announcementbg.png');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.text-content {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Responsive Typography */
+.title {
+  font-size: calc(1.5rem + 1vw); /* Scales with screen size */
+  font-weight: bold;
+}
+
+.highlighted {
+  color: #FDD22E;
+  font-style: italic;
+}
+
+.description {
+  font-size: calc(1rem + 0.5vw); /* Scales with screen size */
+  line-height: 1.6;
   color: #ffffff;
-  border-radius: 10px;
 }
 
+.view-announcements-btn {
+  font-size: 0.9rem;
+  color: #FDD22E;
+  border-color: #FDD22E;
+}
+
+.view-announcements-btn:hover {
+  background-color: #FDD22E;
+  color: #ffffff;
+}
+
+/* Announcement Card Styles */
 .news-card {
-  border-radius: 10px;
-  transition: transform 0.2s;
-}
-
-.news-card:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-}
-
-.slick-arrow {
-  position: absolute;
-  top: -35px; /* Adjust the position of the arrows */
-  background-color: #ffc107; /* Custom yellow color */
   border: none;
-  padding: 5px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.btn-outline-primary {
+  font-size: 0.85rem;
+  color: #16a085;
+  border-color: #16a085;
+}
+
+.btn-outline-primary:hover {
+  background-color: #16a085;
+  color: #fff;
+}
+
+/* Carousel Arrow Button Styling */
+.slick-prev, .slick-next {
+  position: absolute;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #6E6E6F;
   border-radius: 50%;
+  border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1;
+  color: #fff;
 }
 
 .slick-prev {
-  left: 0; /* Position the left arrow */
+  right: 60px;
 }
 
 .slick-next {
-  right: 0; /* Position the right arrow */
+  right: 10px;
+  background-color: #FDD22E;
+  color: #6E6E6F;
 }
 
-.slick
--arrow:hover {
-  background-color: #e0a800; /* Darker shade on hover */
+.slick-prev:hover, .slick-next:hover {
+  opacity: 0.8;
 }
 
-.arrow-icon {
-  font-size: 1.5rem;
-  color: #fff; /* White color for the arrow */
-}
-
-.slick-dots li button:before {
-  color: #00796b; /* Custom color for the dots */
-}
-
+/* Responsive Text Alignment */
 @media (max-width: 768px) {
-  .news-card {
-      width: 100%; /* Full width on smaller screens */
+  .announcement-header {
+      text-align: center;
+  }
+
+  .view-announcements-btn {
+      width: 100%;
+      margin-top: 1rem;
+  }
+
+  .text-content {
+      max-width: 100%;
+  }
+
+  .slick-prev {
+      right: 70px;
+  }
+
+  .slick-next {
+      right: 20px;
   }
 }
+
+
 
 
 
